@@ -48,7 +48,9 @@ fn main() {
     inc();
 
     //let _reborrow = &mut count;
-    // ^ TODO: try uncommenting this line.
+    //inc();
+    // ^ TODO: try uncommenting these two lines.
+    // the reborrow only fails to compile, if the closure still borrows count(non-lexical lifetimes).
     
     // A non-copy type.
     let movable = Box::new(3);
